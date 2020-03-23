@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <title>A curated list of Complexity Science resources in the UK · Complexity Science UK</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: #f9f9f9;">
 <div class="container">
     <div class="text-center">
         <div class="mb-4">
@@ -15,63 +16,52 @@
             <h5>A curated list of Complexity Science resources available in the UK</h5>
             <small>By <a href="https://twitter.com/sebs_tweets">@sebs_tweets - follow me on twitter!</a></small>
         </div>
-        <div>
-            <button class="btn-success">All</button>
-            <button class="btn-success">Institutions</button>
-            <button class="btn-success">Journals</button>
-            <button class="btn-success">People</button>
-            <button class="btn-success">Newsletters</button>
+        <div id="buttonPanel">
+            <button class="btn-success" v-on:click="filter">All</button>
+            <button class="btn-success" v-on:click="filter">Research Institutions</button>
+            <button class="btn-success" v-on:click="filter">Journals</button>
+            <button class="btn-success" v-on:click="filter">People</button>
+            <button class="btn-success" v-on:click="filter">Newsletters</button>
         </div>
     </div>
     <hr>
     <div class="alert alert-primary text-center" role="alert">
         Got a resource you want to add? This list is open source - you can edit it <a href="https://github.com/sebs-code/complexity-science-uk">here</a>.
     </div>
-    <div>
-        <div class="mt-5">
-            <a href="https://www.imperial.ac.uk/complexity-science/"><h5>Centre for Complexity Science (Imperial College London)</h5></a>
-            <p>The Centre engages in a range of research into the applied and fundamental aspects of complexity science, where often the most interesting questions extend beyond the realms of idealised models and the simplifications arising within typical experiments.</p>
-        </div>
-        <div class="mt-5">
-            <a href="http://www.bristol.ac.uk/bccs/"><h5>Bristol Centre for Complexity Sciences (University of Bristol)</h5></a>
-            <p>The'Complexity Complex' was established in 2005 with the goal of catalysing cross-disciplinary research in Complexity Science.
 
-            It built on an ESRC-supported seminar series on 'Socio-economic dynamics', and two EC network projects co-ordinated from Warwick ('Unifying networks in science and society' and 'Complex financial markets') and the work of a number of research groups such as: The Centre for Fusion, Space & Astrophysics; Information Systems Research Unit; Centre for Primary Health Care Studies; and Systems Biology.
-
-            In 2006, Warwick secured RCUK support for six new faculty positions in Complexity Science, associated with the departments of: Mathematics; Physics; Computer Science; Engineering (including WMG); and Medicine and Psychology.
-            Slightly afterwards we were awarded EPSRC funding for an EPSRC Doctoral Training Centre in Complexity Science . This added three permanent academic staff (funded by EPSRC for an initial 5 years), affiliated with Mathematics, Physics and Statistics, and focusses on training a large cohort of PhD students dedicated to Complexity Science, with an annual intake of 7-12 new students, including up to 10 per annum funded by EPSRC.
-
-            The first intake of students was in September 2007. In November 2007 we combined the DTC and the three RCUK fellows affiliated ith Maths, Physics and Computer Science to create the Centre for Complexity Science. In June 2008 we moved into a new, purpose-built extension in the Zeeman ( Mathematics and Statistics) Building.
-
-            September 2010 saw the arrival of the first students on an Erasmus Mundus Masters Course on Complex Systems Science, that Warwick coordinates, joint with Ecole Polytechnique (Paris) and Chalmers and Goteborg universities in Sweden.
-
-            The Centre and DTC are housed in a dedicated extension to the Mathematics and Statistics building, into which we moved in 2008, connected to Computer Science, with Physics, Engineering and other relevant departments nearby.</p>
-        </div>
-        <div class="mt-5">
-            <a href="https://warwick.ac.uk/fac/cross_fac/complexity/"><h5>Centre for Complexity Science (Warwick University)</h5></a>
-            <p>EPSRC Taught Courses in Complexity Science and Complex Systems EPSRC is funding a number of courses for interested researchers that are new to complexity science and complex systems. The courses, running in 2006, are for new researchers and for those with more experience who want to find out more about the underlying concepts in this emerging research area. The courses will also provide an opportunity for networking with researchers from complementary fields.</p>
-        </div>
-        <div class="mt-5">
-            <a href="http://www.casa.ucl.ac.uk/once-cs/epsrc_courses.htm"><h5>ONCE-CS (Cranfield University)</h5></a>
-            <p>EPSRC Taught Courses in Complexity Science and Complex Systems EPSRC is funding a number of courses for interested researchers that are new to complexity science and complex systems. The courses, running in 2006, are for new researchers and for those with more experience who want to find out more about the underlying concepts in this emerging research area. The courses will also provide an opportunity for networking with researchers from complementary fields.</p>
-        </div>
-        <div class="mt-5">
-            <a href="https://www.york.ac.uk/yccsa/"><h5>York Cross-disciplinary Centre for Systems Analysis (University of York)</h5></a>
-            <p>We are an open community of cross-disciplinary researchers, drawn from a diverse range of departments across the University at York.  We are working together, developing and applying novel methods and tools to analyse, model, explore, and solve complex problems that cannot be tackled by one discipline alone.
-            Some 70 YCCSA staff and research students are co-located in purpose-built dedicated research space in the Ron Cooke Hub on the new Heslington East campus.  Other YCCSA members reside in their home departments, and are very much part of the YCCSA community.
-            As well as carrying out cross-disciplinary research, we also reflect on the process itself, and develop new ways to help bring researchers together and bridge the gaps between disciplines.  We each bring our own different and valuable perspectives to the challenges of researching complex systems.</p>
-        </div>
-        <div class="mt-5">
-            <a href="http://www.icss.soton.ac.uk/"><h5>Institute of Complex Systems Simulation</h5></a>
-            <p>The Institute for Complex Systems Simulation (ICSS), of the University of Southampton, has concluded its doctoral training centre (DTC), and pleasingly, has fulfilled its mission to recruit, develop and graduate research leaders and pioneers of complexity science. Our PhD graduates are field specialists, able to analyse, innovate and exploit complex systems models and methodologies. Moreover, the thesis outputs spanned almost the full range of academic research in the university, from the study of flamingo feeding patterns in Kenya and climate dynamics in the Arctic, to the fundamental understanding of mechanical properties in biological membranes and the potential uses of micromagnetics in data storage devices. All projects were complexity focused, addressing the emerging behaviour from complex systems, with a significant simulation or mathematical component. Many of our projects had very direct societal relevance, including human sexual behaviour, while others addressed more fundamental but important physical principles, such as non-equilibrium processes in dynamic systems.</p>
-        </div>
-      </div>
+    <div id="appList" class="mb-5">
+         <div v-for="item in data.data" class="card mt-3">
+              <div class="card-body">
+                    <h5 class="card-title"><a href="{{ item.link }}" title="{{ item.title }}">{{ item.title }}</a></h5>
+                    <h6 class="card-subtitle mb-2 text-muted mt-2"><i v-bind:class="item.icon"></i>{{ item.category }}</h6>
+                    <p class="card-text mt-3">{{ item.description }}</p>
+              </div>
+         </div>
+        <hr>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="data.js"></script>
+
+<script>
+var app = new Vue({
+  el: '#appList',
+  data: data.data
+})
+
+var buttonPanel = new Vue({
+  el: '#buttonPanel',
+   methods: {
+    filter: function (event) {
+        console.log('HELLO');
+    }
+  }
+})
+</script>
 
 </body>
 </html>
